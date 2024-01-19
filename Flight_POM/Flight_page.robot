@@ -31,7 +31,7 @@ Get Arriavl Flight City Details
     ${status}                            Run Keyword And Return Status
     ...                                  Wait Until Page Contains Element               ${first_flight_time}      60
     ${estimates_time}                    Set Variable If                                '${status}' == 'True'
-    ...                                  get text                                        ${first_flight_time}
+    ...                                  ${time}                       get text                                        ${first_flight_time}
     Log                                  ${time}
     Run Keyword If                       '${status}' == 'False'
     ...                                  Log    ${city_name} Data not available
