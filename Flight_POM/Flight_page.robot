@@ -14,13 +14,12 @@ ${POPUP_BUTTON}              id="onetrust-accept-btn-handler"
 
 *** Keywords ***
 Navigate to Flightradar Page
-    Go To                                ${FLIGHT_URL}
     Maximize Browser Window
+    Go To                                ${FLIGHT_URL}
     Title should be                      Pune Airport (PNQ/VAPO) | Arrivals, Departures & Routes | Flightradar24
 
 Click on Arriavls Link
     Wait until page contains element     ${ARRIVALS_LINK}
-    Click Element                        ${POPUP_BUTTON}
     Sleep                                5s
     Click Element                        ${ARRIVALS_LINK}
     Wait until page contains element     ${ARRIVALS_LABEL}
